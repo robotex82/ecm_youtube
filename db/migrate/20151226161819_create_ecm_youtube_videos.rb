@@ -1,7 +1,7 @@
-class CreateEcmVideos < ActiveRecord::Migration
+class CreateEcmYoutubeVideos < ActiveRecord::Migration
   def change
     create_table :ecm_youtube_videos do |t|
-      t.references :category, index: true, foreign_key: true
+      t.integer :category_id, index: true
       t.string :identifier
       t.timestamp :published_at
       t.integer :position

@@ -1,4 +1,4 @@
-class CreateEcmCategories < ActiveRecord::Migration
+class CreateEcmYoutubeCategories < ActiveRecord::Migration
   def change
     create_table :ecm_youtube_categories do |t|
       t.string :identifier
