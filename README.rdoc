@@ -1,0 +1,29 @@
+= Ecm::Youtube
+
+
+= Prerequisites
+
+
+= Installation
+
+Add it to your gemfile:
+
+  # Gemfile
+  gem 'ecm_youtube'
+
+Bundle:
+
+  > bundle install
+
+Add migrations:
+
+  > rake ecm_youtube:install:migrations
+
+Migrate:
+
+  > rake db:migrate
+
+
+= Running Specs
+
+  ./run_specs.sh

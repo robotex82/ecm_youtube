@@ -1,0 +1,23 @@
+en:
+  activerecord:
+    attributes:
+      ecm/youtube/category:
+        identifier: Identifier
+        created_at: Created at
+        updated_at: Updated at
+      ecm/youtube/video:
+        category: Category
+        description: Description
+        duation: Duration
+        identifier: Identifier
+        preview: Preview
+        title: Title
+        created_at: Created at
+        updated_at: Updated at
+    models:
+      ecm/youtube/category:
+        one: Category
+        other: Categories
+      ecm/youtube/video:
+        one: Video
+        other: Videos

@@ -1,0 +1,23 @@
+de:
+  activerecord:
+    attributes:
+      ecm/youtube/category:
+        identifier: Bezeichner
+        created_at: Erstellt am
+        updated_at: Aktualisiert am
+      ecm/youtube/video:
+        category: Kategorie
+        description: Beschreibung
+        duration: Länge
+        identifier: Bezeichner
+        preview: Vorschau
+        title: Titel
+        created_at: Erstellt am
+        updated_at: Aktualisiert am
+    models:
+      ecm/youtube/category:
+        one: Kategorie
+        other: Kategorien
+      ecm/youtube/video:
+        one: Video
+        other: Videos
