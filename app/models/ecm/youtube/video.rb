@@ -12,7 +12,7 @@ module Ecm::Youtube
     belongs_to :category
 
     # callbacks
-    before_save :udpate_meta_data, if: Proc.new { |video| video.identifier_changed? }
+    before_save :update_meta_data, if: Proc.new { |video| video.identifier_changed? }
 
     # delegates
     delegate *YOUTUBE_METHODS, to: :meta_data, prefix: true
@@ -21,8 +21,8 @@ module Ecm::Youtube
     # default_scope { includes(:category).order('ecm_youtube_categories.identifier, position ASC') }
 
     # validations
-    validates :category_id, presence: true
-    validates :identifier, presence: true, uniqueness: { scope: 'category_id' }
+    validates :category, presence: true
+    validates :identifier, presence: true # , uniqueness: { scope: 'category_id' }
 
     def human
       "#{self.class.model_name.human}: #{title}"
@@ -34,7 +34,7 @@ module Ecm::Youtube
 
     private
 
-    def udpate_meta_data
+    def update_meta_data
       self.title = meta_data_title
       self.description = meta_data_description
       self.duration = meta_data_duration
